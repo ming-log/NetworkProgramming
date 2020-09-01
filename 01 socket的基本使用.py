@@ -13,13 +13,14 @@ def main():
 	# '192.168.1.103'标识目的ip地址
 	# 8080表示目的的端口
 	dest_addr = ('192.168.1.2', 8080)  # 注意 是元组， ip是字符串， 端口是数字
+	while True:
+		# 3. 从键盘获取数据
+		send_data = input("请输入要发送的数据:")
 
-	# 3. 从键盘获取数据
-	send_data = "hhhaaa111"
-
-	# 发送数据到指定的电脑上的指定程序中
-	udp_socket.sendto(send_data.encode('utf-8'), dest_addr)
-
+		# 发送数据到指定的电脑上的指定程序中
+		udp_socket.sendto(send_data.encode('utf-8'), dest_addr)
+		if send_data == '0':
+			break
 	# 关闭套接字
 	udp_socket.close()
 	print("---- run ----")
