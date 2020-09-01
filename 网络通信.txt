@@ -97,7 +97,7 @@ s.close()
 #创建一个udp socket(udp套接字)
 import socket
 
-# 创建tcp的套接字
+# 创建udp的套接字
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 # socket.AF_INET  使用ipv4协议
 # socket.SOCK_DGRAM  指UDP
