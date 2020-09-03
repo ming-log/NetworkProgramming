@@ -16,7 +16,7 @@ def main():
     tcp_server_socket.bind(address)
 
     # 使用socket创建的套接字默认的属性是主动的，使用listen将其变为被动的，这样就可以接收别人的链接了
-    tcp_server_socket.listen(128)
+    tcp_server_socket.listen(128)  # 允许很多客户端连接
 
     n = 1
     while True:
